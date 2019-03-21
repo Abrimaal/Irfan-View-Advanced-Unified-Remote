@@ -1,7 +1,49 @@
 local keyboard = libs.keyboard;
+
 ------------------------------------------------
--- File operations
+-- Version 1.2 File operations
 ------------------------------------------------
+
+--@help open image in the favourite folder a
+-- at least one image must be in the folder
+-- PATHS ARE EXAMPLES
+-- remember the double slashes in path
+	actions.fave_a = function()
+	os.open("D://path//path//0.jpg");
+end
+
+--@help open image in the favourite folder b
+-- at least one image must be in the folder
+	actions.fave_b = function()
+	os.open("E://path//path//0.jpg");
+end
+
+--@help copy file to folder 13
+-- paths must be defined in Irfan View
+	actions.copy_13 = function()
+	keyboard.press("F8");
+	keyboard.press("d");
+end
+	--@help move file to folder 13
+actions.move_13 = function()
+	keyboard.press("F7");
+	keyboard.press("d");
+end	
+	--@help move file to 14
+actions.move_14 = function()
+	keyboard.press("F7");
+	keyboard.press("e");
+end
+	--@help copy file to 14
+actions.copy_14 = function()
+	keyboard.press("F8");
+	keyboard.press("e");
+end
+
+------------------------------------------------
+-- Standard file operations
+------------------------------------------------
+
 
 --@help open browser
 actions.open_dir= function()
